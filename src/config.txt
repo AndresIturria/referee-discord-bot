@@ -1,0 +1,13 @@
+img_warning = https://imgur.com/a/j7P0491
+img_yellow = https://imgur.com/a/xdkA6FI
+img_red = https://imgur.com/a/ECXRgOh
+img_expulsion = https://gfycat.com/damprelievedfrogmouth
+img_trapcard = https://imgur.com/gallery/936zTu7/comment/495020295/1?nc=1
+msg_greeting = Hello
+error_generic = I'm not sure what that means
+msg_coin_winner = You won
+msg_coin_loser = You lose
+error_warning = Something went wrong
+error_yellow = Something went wrong
+error_red = Something went wrong
+error_purple = Something went wrong
