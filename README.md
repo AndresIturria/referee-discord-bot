@@ -12,7 +12,7 @@ You can also invite my instance of the bot to your discord server with this [lin
 
 ## Start the bot
 
-install the requirements and run the main.
+Install the requirements and run the main.
 
 ### Run the main
 
