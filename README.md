@@ -18,7 +18,7 @@ Use the Makefile provided or run:
 #### Linux
 
 >python3 src/main.py
-> 
+
 #### Windows
 
 >python src/main.py
