@@ -5,18 +5,7 @@ Config file is provided in src/config.txt with default messages and images for t
 To execute the bot a Discord bot token is needed, place the token in src/key.txt
 
 ## Start the bot
-requirements.txt is provided, to install the dependencies first create a Virtual Enviroment.
-
-### Virtual Enviroment (venv)
-To create the Virtual Enviroment go to the root folder of the repository and run:
->venv venv
-
-### Activate the venv
-Go to venv/Scripts and execute the activate script (.bat for Windows, .sh for Linux).
-
-### Install Dependencies
-Go to the root folder of the project and run:
-pip install -r requirements.txt
+install the requirements and execute the main.
 
 ### Run the main
 Use the Makefile provided or run:
