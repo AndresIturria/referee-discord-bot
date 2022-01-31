@@ -1,5 +1,4 @@
 import load, utilities, random
-from src.models import referee_model
 import discord
 from discord.ext import commands
 
