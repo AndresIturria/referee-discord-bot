@@ -1,4 +1,5 @@
-import db, load, utilities, random
+import load, utilities, random
+from src.models import referee_model
 import discord
 from discord.ext import commands
 
@@ -63,9 +64,9 @@ if __name__ == '__main__':
                 toss = random.randint(0, 1)
                 choice = ""
                 if toss == 0:
-                    choice = 'Head'
+                    choice = 'head'
                 else:
-                    choice = 'Tails'
+                    choice = 'tails'
 
                 await ctx.channel.send(f"Result: {choice}")
                 if arg == choice:
