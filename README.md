@@ -12,7 +12,7 @@ You can also invite my instance of the bot to your discord server with this [lin
 
 ## Start the bot
 
-Install the requirements and run the main.
+Install the requirements and run the main from the root folder (python3 src/main.py).
 
 ### Run the main
 
