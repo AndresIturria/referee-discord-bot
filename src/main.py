@@ -5,6 +5,13 @@ from discord.ext import commands
 
 if __name__ == '__main__':
 
+    async def get_discord_username(ctx, id):
+        try:
+            killer_member = await ctx.guild.fetch_member(id)
+            return killer_member
+        except(discord.errors.NotFound):
+            return("This user is not in the server")
+
     # Load messages and images and Discord token
     warning_img, yellow_img, red_img, expulsion_img, trapcard_img = load.load_imgs()
     error_warnings, error_yellows, error_reds, error_expulsions, error_generic, msg_greeting, \
@@ -95,19 +102,19 @@ if __name__ == '__main__':
             embed4 = discord.Embed(title="Expulsions", color=0x03f8fc)
 
             for user in top_warnings:
-                member = await ctx.guild.fetch_member(user.userID)
+                member = await get_discord_username(ctx, user.userID)
                 embed1.add_field(name=member.display_name, value=user.totalWarnings)
 
             for user in top_yellows:
-                member = await ctx.guild.fetch_member(user.userID)
+                member = await get_discord_username(ctx, user.userID)
                 embed2.add_field(name=member.display_name, value=user.totalYellows)
 
             for user in top_reds:
-                member = await ctx.guild.fetch_member(user.userID)
+                member = await get_discord_username(ctx, user.userID)
                 embed3.add_field(name=member.display_name, value=user.totalReds)
 
             for user in top_expulsions:
-                member = await ctx.guild.fetch_member(user.userID)
+                member = await get_discord_username(ctx, user.userID)
                 embed4.add_field(name=member.display_name, value=user.totalExpulsions)
 
             await ctx.channel.send(embed=embed1)
