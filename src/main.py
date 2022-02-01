@@ -8,7 +8,7 @@ if __name__ == '__main__':
     async def get_discord_username(ctx, id):
         try:
             killer_member = await ctx.guild.fetch_member(id)
-            return killer_member
+            return killer_member.display_name
         except(discord.errors.NotFound):
             return("This user is not in the server")
 
@@ -103,19 +103,19 @@ if __name__ == '__main__':
 
             for user in top_warnings:
                 member = await get_discord_username(ctx, user.userID)
-                embed1.add_field(name=member.display_name, value=user.totalWarnings)
+                embed1.add_field(name=member, value=user.totalWarnings)
 
             for user in top_yellows:
                 member = await get_discord_username(ctx, user.userID)
-                embed2.add_field(name=member.display_name, value=user.totalYellows)
+                embed2.add_field(name=member, value=user.totalYellows)
 
             for user in top_reds:
                 member = await get_discord_username(ctx, user.userID)
-                embed3.add_field(name=member.display_name, value=user.totalReds)
+                embed3.add_field(name=member, value=user.totalReds)
 
             for user in top_expulsions:
                 member = await get_discord_username(ctx, user.userID)
-                embed4.add_field(name=member.display_name, value=user.totalExpulsions)
+                embed4.add_field(name=member, value=user.totalExpulsions)
 
             await ctx.channel.send(embed=embed1)
             await ctx.channel.send(embed=embed2)
