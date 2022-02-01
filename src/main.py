@@ -1,4 +1,4 @@
-import load, utilities, random
+import load, utilities, random, db
 import discord
 from discord.ext import commands
 
