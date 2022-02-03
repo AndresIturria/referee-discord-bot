@@ -207,19 +207,15 @@ if __name__ == '__main__':
                     userid = ctx.author.id
                     db.expulsion(userid, serverid)
                     member = await ctx.guild.fetch_member(userid)
-                    await discord.Member.kick(member, None, reason="Bye")
+                    await member.kick(reason="Bye Felicia")
                     await ctx.channel.send(random.choice(trapcard_img))
 
                 else:
-                    print("1")
                     db.expulsion(userid, serverid)
-                    print("2")
                     member = await ctx.guild.fetch_member(userid)
-                    print("3")
                     await member.kick(reason="Bye Felicia")
-                    print("4")
                     await ctx.channel.send(random.choice(expulsion_img))
-                    print("5")
+
 
             except:
                 await ctx.channel.send(random.choice(error_expulsions))
