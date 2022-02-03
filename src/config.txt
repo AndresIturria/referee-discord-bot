@@ -10,4 +10,4 @@ msg_coin_loser = You lose
 error_warning = Something went wrong
 error_yellow = Something went wrong
 error_red = Something went wrong
-error_purple = Something went wrong
+error_expulsion = Something went wrong
