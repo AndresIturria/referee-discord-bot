@@ -216,7 +216,7 @@ if __name__ == '__main__':
                     print("2")
                     member = await ctx.guild.fetch_member(userid)
                     print("3")
-                    await discord.Member.kick(member, None, reason="Bye")
+                    await bot.kick(member)
                     print("4")
                     await ctx.channel.send(random.choice(expulsion_img))
                     print("5")
